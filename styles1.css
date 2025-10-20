@@ -1,0 +1,165 @@
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: linear-gradient(to bottom right, rgba(220,230,245,0.95), rgba(240,245,250,0.95)), 
+                url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=1600&q=80');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    border-bottom: 3px solid #2c3e50;
+    padding: 20px 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+h2 {
+    color: #2980b9;
+    margin-top: 25px;
+    text-align: center;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: center;
+    color: #34495e;
+}
+
+a {
+    color: #e74c3c;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #c0392b;
+}
+
+img {
+    width: 200px;
+    float: left;
+    margin-right: 150px;
+    border-radius: 100px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.bombilla {
+    width: 100px;
+    display: block;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.bombilla:hover {
+    transform: scale(1.1);
+}
+
+hr {
+    margin: 40px auto;
+    width: 80%;
+    border: none;
+    border-top: 2px dashed #95a5a6;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    width: 350px;
+    margin: 40px auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+form label {
+    font-weight: 600;
+    color: #2c3e50;
+    display: block;
+    margin-top: 10px;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    transition: border 0.3s, background 0.3s;
+}
+
+form input[type="text"]:focus,
+form textarea:focus {
+    border-color: #2980b9;
+    background-color: #ffffff;
+    outline: none;
+}
+
+form textarea {
+    height: 120px;
+    resize: none;
+}
+
+form input[type="submit"],
+form input[type="reset"] {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 48%;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    background-color: #1f6391;
+    transform: scale(1.05);
+}
+
+.navbar {
+    background-color: #2c3e50;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.navbar a:hover {
+    color: #f1c40f;
+    transform: scale(1.1);
+}
+
+body {
+    scroll-behavior: smooth;
+}
