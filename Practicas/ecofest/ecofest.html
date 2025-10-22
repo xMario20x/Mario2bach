@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GymFest — Fitness y Deporte</title>
+  <meta name="description" content="GymFest: festival de fitness y deporte. Competiciones, talleres, foodtrucks saludables y más." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="theme-dark">
+  <!-- Enlace para saltar al contenido: accesibilidad -->
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- CABECERA / NAV -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <!-- Logo de gimnasio -->
+        <img src="https://images.unsplash.com/photo-1536922246289-88c42f957773?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=120&q=80" alt="Logo GymFest - Una pesa olímpica" class="logo" />
+        <span class="brand-text">GymFest</span>
+      </a>
+
+      <nav class="nav">
+        <a href="#programa">Programa</a>
+        <a href="#talleres">Talleres</a>
+        <a href="programa-completo.html">Programa Completo</a>
+        <a href="#entradas" class="btn btn--small">Entradas</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+          <svg class="theme-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 2V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 20V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4.93 4.93L6.34 6.34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17.66 17.66L19.07 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6.34 17.66L4.93 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19.07 4.93L17.66 6.34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <h1>Festival de <span class="highlight">fitness y deporte</span></h1>
+        <p class="lead">
+          14–16 de junio, Polideportivo Municipal. Competiciones, entrenamientos, comida saludable y diversión deportiva.
+        </p>
+        <div class="hero-cta">
+          <a href="#entradas" class="btn">Comprar entradas</a>
+          <a href="programa-completo.html" class="btn btn--ghost">Programa Completo</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Personas haciendo ejercicio en un gimnasio moderno con equipos de fitness" />
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main id="contenido" class="main">
+    <!-- BLOQUE DESTACOS (Grid) -->
+    <section id="programa" class="section">
+      <div class="container">
+        <h2>Programa y destacados</h2>
+        <p class="section-desc">Tres días de competiciones, entrenamientos y actividades deportivas para todos los niveles.</p>
+
+        <div class="grid-cards">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Atleta realizando levantamiento de pesas en competición de powerlifting" />
+            <div class="card-body">
+              <h3>Competición de Powerlifting</h3>
+              <p>Demuestra tu fuerza en las tres pruebas principales: sentadilla, press banca y peso muerto.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1599901860904-17e6ed7083a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Batidos proteicos y comida saludable en un stand de nutrición deportiva" />
+            <div class="card-body">
+              <h3>Foodtrucks Saludables</h3>
+              <p>Comida nutritiva, batidos proteicos y snacks saludables para reponer energías.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1220&q=80" alt="Grupo de personas realizando yoga al aire libre en el festival" />
+            <div class="card-body">
+              <h3>Clases Grupales</h3>
+              <p>Yoga, crossfit, spinning y más actividades dirigidas por entrenadores certificados.</p>
+            </div>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1220&q=80" alt="Zona de recuperación con fisioterapeuta realizando masajes deportivos" />
+            <div class="card-body">
+              <h3>Zona de Recuperación</h3>
+              <p>Masajes deportivos, crioterapia y estiramientos guiados para una óptima recuperación.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIOS (Flexbox) -->
+    <section class="section alt">
+      <div class="container">
+        <h2>Lo que dice la comunidad fitness</h2>
+        <div class="testimonials">
+          <blockquote class="quote">
+            <p>"El mejor evento deportivo del año. ¡Volveré sin duda!"</p>
+            <footer>— Carlos, 29</footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>"Increíble ambiente y organización. Conocí a muchos compañeros de entrenamiento."</p>
+            <footer>— Ana, 34</footer>
+          </blockquote>
+          <blockquote class="quote">
+            <p>"Los talleres fueron muy útiles y los entrenadores de primer nivel."</p>
+            <footer>— Miguel, 26</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- TALLERES (lista con iconos) -->
+    <section id="talleres" class="section">
+      <div class="container">
+        <h2>Talleres Especializados</h2>
+        <ul class="feature-list">
+          <li>
+            <span class="feature-emoji" aria-hidden="true">💪</span>
+            Técnica de levantamiento olímpico
+          </li>
+          <li>
+            <span class="feature-emoji" aria-hidden="true">🧘</span>
+            Yoga para deportistas
+          </li>
+          <li>
+            <span class="feature-emoji" aria-hidden="true">🍎</span>
+            Nutrición deportiva práctica
+          </li>
+          <li>
+            <span class="feature-emoji" aria-hidden="true">🏋️</span>
+            Entrenamiento funcional avanzado
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section id="entradas" class="section alt">
+      <div class="container">
+        <h2>Entradas</h2>
+        <p class="section-desc">Rellena el formulario y te enviaremos las opciones disponibles.</p>
+
+        <form class="form" aria-labelledby="entradas" id="formulario-entradas">
+          <div class="form-row">
+            <label for="nombre">Nombre completo</label>
+            <input id="nombre" name="nombre" type="text" placeholder="Tu nombre completo" required minlength="2" />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" type="email" placeholder="tucorreo@ejemplo.com" required />
+          </div>
+
+          <div class="form-row">
+            <label for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" placeholder="+34 123 456 789" pattern="[0-9+]{9,}" required />
+          </div>
+
+          <fieldset class="form-row">
+            <legend>Tipo de entrada</legend>
+            <label><input type="radio" name="tipo" value="dia" required /> Día</label>
+            <label><input type="radio" name="tipo" value="abono" /> Abono (3 días)</label>
+            <label><input type="radio" name="tipo" value="vip" /> Pase VIP</label>
+          </fieldset>
+
+          <div class="form-row">
+            <label for="nivel">Nivel de experiencia</label>
+            <select id="nivel" name="nivel" required>
+              <option value="" disabled selected>Selecciona tu nivel</option>
+              <option value="principiante">Principiante</option>
+              <option value="intermedio">Intermedio</option>
+              <option value="avanzado">Avanzado</option>
+              <option value="competidor">Competidor</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="mensaje">Comentarios adicionales</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Intereses específicos, lesiones previas, necesidades especiales..." maxlength="500"></textarea>
+            <small id="contador-caracteres">0/500 caracteres</small>
+          </div>
+
+          <div class="form-row">
+            <label>
+              <input type="checkbox" name="terminos" required />
+              Acepto los <a href="#">términos y condiciones</a> y la <a href="#">política de privacidad</a>
+            </label>
+          </div>
+
+          <button type="submit" class="btn">Enviar solicitud</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> GymFest. Hecho con HTML &amp; CSS.</p>
+      <a href="#top" class="back-to-top">↑ Volver arriba</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    // Año actual
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Toggle de tema
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    
+    themeToggle.addEventListener('click', () => {
+      if (body.classList.contains('theme-light')) {
+        body.classList.remove('theme-light');
+        body.classList.add('theme-dark');
+        localStorage.setItem('theme', 'dark');
+      } else {
+        body.classList.remove('theme-dark');
+        body.classList.add('theme-light');
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Cargar tema guardado
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      body.classList.remove('theme-dark', 'theme-light');
+      body.classList.add(`theme-${savedTheme}`);
+    }
+
+    // Contador de caracteres para textarea
+    const mensajeTextarea = document.getElementById('mensaje');
+    const contadorCaracteres = document.getElementById('contador-caracteres');
+    
+    if (mensajeTextarea && contadorCaracteres) {
+      mensajeTextarea.addEventListener('input', () => {
+        const longitud = mensajeTextarea.value.length;
+        contadorCaracteres.textContent = `${longitud}/500 caracteres`;
+        
+        if (longitud > 450) {
+          contadorCaracteres.style.color = '#ff6b6b';
+        } else {
+          contadorCaracteres.style.color = '';
+        }
+      });
+    }
+
+    // Validación adicional del formulario
+    const formulario = document.getElementById('formulario-entradas');
+    if (formulario) {
+      formulario.addEventListener('submit', (e) => {
+        // Validación adicional personalizada si es necesaria
+        const tipoEntrada = document.querySelector('input[name="tipo"]:checked');
+        if (!tipoEntrada) {
+          e.preventDefault();
+          alert('Por favor, selecciona un tipo de entrada');
+          return;
+        }
+        
+        // Aquí podrías agregar más validaciones según sea necesario
+      });
+    }
+  </script>
+</body>
+</html>
