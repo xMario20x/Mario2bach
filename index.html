@@ -3,79 +3,170 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mis prácticas de HTML, CSS y JavaScript de Mario</title>
+  <title>Mis prácticas HTML, CSS y JavaScript</title>
   <style>
+    :root {
+      --primary: #007acc;
+      --primary-dark: #005a8c;
+      --bg: #f7f9fc;
+      --card-bg: #ffffff;
+      --text: #333;
+      --shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+    
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
-      color: #333;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
       text-align: center;
-      padding: 40px;
-      background-image: linear-gradient(to bottom, #f7f7f7, #e8f4f8);
+      padding: 40px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 40px 30px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-dark));
     }
     
     h1 {
-      color: #007acc;
-      margin-bottom: 10px;
+      color: var(--primary);
+      margin-bottom: 15px;
+      font-weight: 700;
+      font-size: 1.8rem;
     }
     
-    p {
+    .subtitle {
+      color: #666;
       margin-bottom: 30px;
-      color: #555;
+      font-size: 1.1rem;
     }
     
     ul {
       list-style: none;
       padding: 0;
-      max-width: 500px;
-      margin: 0 auto;
+      margin: 0;
     }
     
     li {
-      margin: 15px 0;
-      background-color: white;
-      border-radius: 8px;
-      padding: 5px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      transition: transform 0.2s;
-    }
-    
-    li:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 18px 0;
+      transition: all 0.3s ease;
     }
     
     a {
-      text-decoration: none;
-      color: #007acc;
-      font-weight: bold;
       display: block;
-      padding: 10px;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      padding: 14px 20px;
+      border-radius: 10px;
+      background: rgba(0, 122, 204, 0.05);
+      border: 1px solid rgba(0, 122, 204, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    a::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(0, 122, 204, 0.1), transparent);
+      transition: left 0.5s;
     }
     
     a:hover {
-      color: #005a8c;
+      color: var(--primary-dark);
+      background: rgba(0, 122, 204, 0.1);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    a:hover::before {
+      left: 100%;
+    }
+    
+    .practice-badge {
+      display: inline-block;
+      width: 26px;
+      height: 26px;
+      background: var(--primary);
+      color: white;
+      border-radius: 50%;
+      line-height: 26px;
+      font-size: 0.8rem;
+      margin-right: 10px;
+      font-weight: bold;
     }
     
     footer {
       margin-top: 40px;
-      font-size: 14px;
-      color: #777;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    
+    @media (max-width: 480px) {
+      body {
+        padding: 20px 10px;
+      }
+      
+      .container {
+        padding: 30px 20px;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>Mis prácticas de HTML, CSS y JavaScript</h1>
-  <p>Selecciona una práctica para verla</p>
+  <div class="container">
+    <h1>Mis prácticas de HTML, CSS y JavaScript</h1>
+    <p class="subtitle">Selecciona una práctica para verla</p>
 
-  <ul>
-    <li><a href="Practicas/aboutme/index.html">Práctica 1: About Me</a></li>
-    <li><a href="Practicas/ecofest/index.html">Práctica 2: Ecofest</a></li>
-    <li><a href="practicas-html-css-js/practica-03.js/">Práctica 3: No creada aún</a></li>
-  </ul>
+    <ul>
+      <li>
+        <a href="Practicas/aboutme/index.html">
+          <span class="practice-badge">1</span>Práctica 1: About Me
+        </a>
+      </li>
+      <li>
+        <a href="Practicas/ecofest/index.html">
+          <span class="practice-badge">2</span>Práctica 2: Ecofest
+        </a>
+      </li>
+      <li>
+        <a href="practicas-html-css-js/practica-03.js/">
+          <span class="practice-badge">3</span>Práctica 3: No creada aún
+        </a>
+      </li>
+    </ul>
 
-  <footer>
-    <p>Mis prácticas web | Github Pages</p>
-  </footer>
+    <footer>
+      <p>Mis prácticas web | Github Pages</p>
+    </footer>
+  </div>
 </body>
 </html>
