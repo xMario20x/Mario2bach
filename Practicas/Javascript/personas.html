@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestor de Alumnos</title>
+    <title>Alumnos</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -40,7 +40,6 @@
 <body>
     <h1>Gestor de Alumnos</h1>
     
-    <!-- Tabla para mostrar información del alumno -->
     <table>
         <tr>
             <th>Nombre</th>
@@ -64,10 +63,8 @@
         </tr>
     </table>
     
-    <!-- Foto del alumno -->
     <img id="foto" class="foto" src="" alt="Foto del alumno">
     
-    <!-- Botones para seleccionar alumnos -->
     <div>
         <h3>Seleccionar Alumno:</h3>
         <button onclick="mostrarAlumno(0)">Ana</button>
@@ -76,7 +73,6 @@
         <button onclick="mostrarAlumno(3)">Carlos</button>
     </div>
     
-    <!-- Botones para aumentar puntos y faltas -->
     <div>
         <h3>Acciones:</h3>
         <button onclick="aumentarPuntos()">Aumentar Puntos</button>
@@ -84,10 +80,8 @@
     </div>
 
     <script>
-        // Crear la matriz (array) de alumnos
         var alumnos = new Array();
         
-        // Crear 4 objetos alumno con sus propiedades
         alumnos[0] = {
             nombre: "Ana",
             apellido: "García",
@@ -98,36 +92,34 @@
         };
         
         alumnos[1] = {
-            nombre: "Luis",
-            apellido: "Martínez",
-            edad: 19,
-            puntos: 0,
-            faltas: 0,
-            foto: "https://cdn.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_640.jpg"
-        };
-        
-        alumnos[2] = {
-            nombre: "Marta",
-            apellido: "Rodríguez",
+            nombre: "Mario",
+            apellido: "Aleyxendri",
             edad: 17,
             puntos: 0,
             faltas: 0,
-            foto: "https://cdn.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_640.jpg"
+            foto: "https://ih1.redbubble.net/image.3100698674.5642/flat,750x,075,f-pad,750x1000,f8f8f8.u1.jpg"
+        };
+        
+        alumnos[2] = {
+            nombre: "Javi",
+            apellido: "Sanchez",
+            edad: 17,
+            puntos: 0,
+            faltas: 0,
+            foto: "https://png.pngtree.com/thumb_back/fh260/background/20230610/pngtree-fat-man-with-his-face-wide-open-image_2916936.jpg"
         };
         
         alumnos[3] = {
-            nombre: "Carlos",
-            apellido: "López",
-            edad: 18,
+            nombre: "Adam",
+            apellido: "Bibi",
+            edad: 17,
             puntos: 0,
             faltas: 0,
-            foto: "https://cdn.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_640.jpg"
+            foto: "data:image/jpeg;base64,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"
         };
         
-        // Variable para guardar qué alumno estamos viendo
         var alumnoActual = 0;
         
-        // Función para mostrar un alumno en la tabla
         function mostrarAlumno(indice) {
             alumnoActual = indice;
             var alumno = alumnos[indice];
@@ -141,20 +133,18 @@
             document.getElementById("foto").src = alumno.foto;
         }
         
-        // Función para aumentar puntos
         function aumentarPuntos() {
             alumnos[alumnoActual].puntos++;
             document.getElementById("puntos").textContent = alumnos[alumnoActual].puntos;
         }
         
-        // Función para aumentar faltas
         function aumentarFaltas() {
             alumnos[alumnoActual].faltas++;
             document.getElementById("faltas").textContent = alumnos[alumnoActual].faltas;
         }
         
-        // Mostrar el primer alumno al cargar la página
         mostrarAlumno(0);
     </script>
 </body>
+
 </html>
