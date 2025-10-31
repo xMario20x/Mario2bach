@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Javascript</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      color: #333;
+      text-align: center;
+      padding: 40px 20px;
+      min-height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      position: relative;
+    }
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: linear-gradient(90deg, #3498db, #2ecc71);
+    }
+    h1 {
+      color: #3498db;
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+    }
+    .subtitle {
+      color: #7f8c8d;
+      margin-bottom: 25px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    li {
+      margin: 15px 0;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: 600;
+      padding: 15px 20px;
+      border-radius: 10px;
+      background: #f8f9fa;
+      border: 1px solid rgba(52, 152, 219, 0.2);
+      transition: all 0.3s ease;
+    }
+    a:hover {
+      background: rgba(52, 152, 219, 0.1);
+      transform: translateY(-2px);
+      box-shadow: 0 5px 10px rgba(0,0,0,0.08);
+    }
+    .badge {
+      width: 28px;
+      height: 28px;
+      background: #3498db;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      margin-right: 12px;
+      flex-shrink: 0;
+    }
+    footer {
+      margin-top: 30px;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 480px) {
+      body { padding: 20px 10px; }
+      .container { padding: 20px 15px; }
+      h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Mis Prácticas de Javascript</h1>
+    <p class="subtitle">Selecciona una práctica para verla</p>
+
+    <ul>
+      <li>
+        <a href="Practicas/Javascript/personas.html">
+          <span class="badge">1</span>
+          Práctica 1: Quimica
+        </a>
+      </li>
+      <li>
+        <a href="Practicas/Javascript/tareatablas.html">
+          <span class="badge">2</span>
+          Práctica 2: Personas
+        </a>
+      </li>
+      <li>
+        <a href="Practicas/Javascript/calculadora.html">
+          <span class="badge">3</span>
+          Práctica 3: Calculadora (En progreso)
+        </a>
+      </li>
+    </ul>
+
+    <footer>
+      <p>Mis prácticas web | GitHub Pages</p>
+    </footer>
+  </div>
+</body>
+</html>
