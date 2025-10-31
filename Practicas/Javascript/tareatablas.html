@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabla de Elementos</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 40px;
+      background-color: #f8f9fa;
+    }
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 60%;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      font-size: 18px;
+    }
+    th {
+      background-color: #007BFF;
+      color: white;
+    }
+    button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 5px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Tabla de Elementos Químicos</h2>
+
+  <table id="tabla-elemento">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Símbolo</th>
+        <th>Peso atómico</th>
+        <th>Número atómico</th>
+      </tr>
+    </thead>
+    <tbody id="cuerpo-tabla">
+      <tr>
+        <td colspan="4">Haz clic en un botón para ver el elemento</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+    <button onclick="mostrarElemento('Hidrógeno')">Hidrógeno</button>
+    <button onclick="mostrarElemento('Carbono')">Carbono</button>
+    <button onclick="mostrarElemento('Oxígeno')">Oxígeno</button>
+  </div>
+
+  <script>
+    const elementos = {
+      "Hidrógeno": { simbolo: "H", peso: 1.008, numero: 1 },
+      "Carbono": { simbolo: "C", peso: 12.011, numero: 6 },
+      "Oxígeno": { simbolo: "O", peso: 15.999, numero: 8 }
+    };
+
+    function mostrarElemento(nombre) {
+      const elemento = elementos[nombre];
+      const cuerpo = document.getElementById("cuerpo-tabla");
+      cuerpo.innerHTML = `
+        <tr>
+          <td>${nombre}</td>
+          <td>${elemento.simbolo}</td>
+          <td>${elemento.peso}</td>
+          <td>${elemento.numero}</td>
+        </tr>
+      `;
+    }
+  </script>
+
+</body>
+</html>

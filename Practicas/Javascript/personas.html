@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de Alumnos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        button {
+            padding: 8px 12px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .foto {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Gestor de Alumnos</h1>
+    
+    <!-- Tabla para mostrar información del alumno -->
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <td id="nombre">-</td>
+        </tr>
+        <tr>
+            <th>Apellidos</th>
+            <td id="apellidos">-</td>
+        </tr>
+        <tr>
+            <th>Edad</th>
+            <td id="edad">-</td>
+        </tr>
+        <tr>
+            <th>Puntos</th>
+            <td id="puntos">0</td>
+        </tr>
+        <tr>
+            <th>Faltas</th>
+            <td id="faltas">0</td>
+        </tr>
+    </table>
+    
+    <!-- Foto del alumno -->
+    <img id="foto" class="foto" src="" alt="Foto del alumno">
+    
+    <!-- Botones para seleccionar alumnos -->
+    <div>
+        <h3>Seleccionar Alumno:</h3>
+        <button onclick="mostrarAlumno(0)">Ana</button>
+        <button onclick="mostrarAlumno(1)">Luis</button>
+        <button onclick="mostrarAlumno(2)">Marta</button>
+        <button onclick="mostrarAlumno(3)">Carlos</button>
+    </div>
+    
+    <!-- Botones para aumentar puntos y faltas -->
+    <div>
+        <h3>Acciones:</h3>
+        <button onclick="aumentarPuntos()">Aumentar Puntos</button>
+        <button onclick="aumentarFaltas()">Aumentar Faltas</button>
+    </div>
+
+    <script>
+        // Crear la matriz (array) de alumnos
+        var alumnos = new Array();
+        
+        // Crear 4 objetos alumno con sus propiedades
+        alumnos[0] = {
+            nombre: "Ana",
+            apellido: "García",
+            edad: 18,
+            puntos: 0,
+            faltas: 0,
+            foto: "https://cdn.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_640.jpg"
+        };
+        
+        alumnos[1] = {
+            nombre: "Luis",
+            apellido: "Martínez",
+            edad: 19,
+            puntos: 0,
+            faltas: 0,
+            foto: "https://cdn.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_640.jpg"
+        };
+        
+        alumnos[2] = {
+            nombre: "Marta",
+            apellido: "Rodríguez",
+            edad: 17,
+            puntos: 0,
+            faltas: 0,
+            foto: "https://cdn.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_640.jpg"
+        };
+        
+        alumnos[3] = {
+            nombre: "Carlos",
+            apellido: "López",
+            edad: 18,
+            puntos: 0,
+            faltas: 0,
+            foto: "https://cdn.pixabay.com/photo/2016/11/29/13/14/attractive-1869761_640.jpg"
+        };
+        
+        // Variable para guardar qué alumno estamos viendo
+        var alumnoActual = 0;
+        
+        // Función para mostrar un alumno en la tabla
+        function mostrarAlumno(indice) {
+            alumnoActual = indice;
+            var alumno = alumnos[indice];
+            
+            // Mostrar los datos en la tabla
+            document.getElementById("nombre").textContent = alumno.nombre;
+            document.getElementById("apellidos").textContent = alumno.apellido;
+            document.getElementById("edad").textContent = alumno.edad;
+            document.getElementById("puntos").textContent = alumno.puntos;
+            document.getElementById("faltas").textContent = alumno.faltas;
+            document.getElementById("foto").src = alumno.foto;
+        }
+        
+        // Función para aumentar puntos
+        function aumentarPuntos() {
+            alumnos[alumnoActual].puntos++;
+            document.getElementById("puntos").textContent = alumnos[alumnoActual].puntos;
+        }
+        
+        // Función para aumentar faltas
+        function aumentarFaltas() {
+            alumnos[alumnoActual].faltas++;
+            document.getElementById("faltas").textContent = alumnos[alumnoActual].faltas;
+        }
+        
+        // Mostrar el primer alumno al cargar la página
+        mostrarAlumno(0);
+    </script>
+</body>
+</html>
